@@ -15,7 +15,7 @@ class BlogServer {
     _posts = db.collection("posts");
     
     // uncomment the following line to remove all the posts at app startup
-    //_posts.remove();
+    _posts.remove();
     
     
   }
@@ -30,7 +30,7 @@ class BlogServer {
                .addEndpoint(new Route("/post/all", "GET", getPosts))  //return all posts
                //.addEndpoint(new Route("/post", "GET", getRecentPost))  //return the first post
                .addEndpoint(new Route("/post", "POST", addPost)) //add a post
-               .addEndpoint(new StaticFile("./blog"));
+               .addEndpoint(new StaticFile("./client"));
     
     server.modules["*"] = module;  //this is the default module.
     
