@@ -3463,7 +3463,7 @@ function main() {
     var posts = json_JSON.parse(result.get$responseText());
     for (var $$i = posts.iterator(); $$i.hasNext(); ) {
       var blogPost = $$i.next();
-      addPostToUi(postDiv, json_JSON.parse(blogPost));
+      addPostToUi(postDiv, blogPost);
     }
   })
   );
